@@ -1,0 +1,311 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e5ddff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #432883;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #eafaf1;
+  height: 300px;
+  background-image: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .btn {
+  margin-top: 20%;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5d369c;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background-color: #623d9d;
+}
+
+/* Products Section */
+.products {
+  padding: 3rem 15rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #432883;
+}
+
+.product-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.product {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.buy-now {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #5d369c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.buy-now:hover {
+  background-color: #482580;
+}
+
+/* About Section */
+.about {
+  padding: 3rem 1rem;
+  background-color: #432883;
+  color: #ffffff;
+}
+
+.about .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 1rem;
+  background-color: #f4f4f4;
+}
+
+.contact .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #432883;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact-info {
+  background-color: #432883;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #432883;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products {
+      padding: 2rem 1rem;
+  }
+
+  .product-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar a {
+      margin: 0.5rem 0;
+  }
+
+  .hero {
+      padding: 2rem 1rem;
+      height: auto;
+  }
+
+  .hero .btn {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+  }
+
+  .about-content {
+      flex-direction: column;
+  }
+
+  .contact-content {
+      flex-direction: column;
+  }
+
+  .contact-info {
+      margin-bottom: 2rem;
+  }
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 3rem 1rem;
+  background-color: #f4f4f4; /* Warna latar cerah */
+}
+
+.reviews .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #432883;
+}
+
+.review-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.review {
+  background-color: #ffffff; /* Warna latar putih untuk kontras */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333; /* Teks warna gelap untuk keterbacaan */
+  margin-bottom: 1rem;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-author-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #432883;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-list {
+      grid-template-columns: 1fr; /* Ulasan tampil 1 kolom di layar kecil */
+  }
+
+  .review-text {
+      font-size: 1rem; /* Teks sedikit lebih kecil */
+  }
+}
